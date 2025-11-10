@@ -143,6 +143,49 @@ All colors MUST be HSL.
 }
 
 @layer utilities {
+  /* Font Family Utilities */
+  .font-heading {
+    font-family: 'Fredoka', sans-serif;
+  }
+  
+  .font-body {
+    font-family: 'Nunito', sans-serif;
+  }
+
+  /* Pokémon Sun / Mega Dimension inspired logo styles */
+  .logo-title {
+    font-family: 'Fredoka', sans-serif;
+    font-weight: 800;
+    background: linear-gradient(180deg, 
+      hsl(45, 100%, 60%) 0%,
+      hsl(35, 100%, 55%) 40%, 
+      hsl(25, 95%, 50%) 100%
+    );
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 
+      4px 4px 0px hsl(20, 80%, 40%),
+      6px 6px 0px hsl(15, 70%, 30%),
+      0 0 30px hsl(45, 100%, 70%),
+      0 0 60px hsl(35, 100%, 60%);
+    filter: drop-shadow(0 8px 16px rgba(0, 0, 0, 0.3));
+    letter-spacing: -0.02em;
+  }
+
+  /* Restore text shadow for elements with logo-title class */
+  .logo-title {
+    -webkit-text-fill-color: transparent;
+  }
+  
+  /* For browsers that don't support background-clip */
+  @supports not (background-clip: text) {
+    .logo-title {
+      color: hsl(40, 100%, 55%);
+      -webkit-text-fill-color: hsl(40, 100%, 55%);
+    }
+  }
+
   /* Animações Customizadas */
   .animate-float {
     animation: float 3s ease-in-out infinite;
