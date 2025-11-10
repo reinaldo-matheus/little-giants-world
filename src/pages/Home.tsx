@@ -1,9 +1,8 @@
 import { Button } from "@/components/ui/button";
 import { useNavigate } from "react-router-dom";
-import logoImage from "@/assets/logo.png";
-import characterGirl from "@/assets/character-girl-garden.png";
-import characterBoy from "@/assets/character-boy-backpack.png";
-import characterFruits from "@/assets/character-girl-fruits.png";
+import characterGirl from "@/assets/character-3d-girl-garden.png";
+import characterBoy from "@/assets/character-3d-boy-backpack.png";
+import characterFruits from "@/assets/character-3d-girl-fruits.png";
 import hillsBackground from "@/assets/hills-background.jpg";
 
 export const Home = () => {
@@ -20,38 +19,46 @@ export const Home = () => {
       }}
     >
       {/* Gradient overlay for better text readability */}
-      <div className="absolute inset-0 bg-gradient-to-b from-background/70 via-background/50 to-background/30"></div>
+      <div className="absolute inset-0 bg-gradient-to-b from-background/60 via-background/40 to-background/20"></div>
       
-      {/* Characters at the top */}
-      <div className="absolute top-4 md:top-8 left-0 right-0 flex justify-center gap-4 md:gap-8 px-4 z-10">
-        <div className="animate-float w-20 h-20 md:w-32 md:h-32">
+      {/* 3D Characters - Dynamic Composition */}
+      <div className="absolute inset-0 z-10 pointer-events-none">
+        {/* Left character - Girl with garden */}
+        <div className="absolute left-0 md:left-10 bottom-0 w-48 h-48 md:w-80 md:h-80 lg:w-96 lg:h-96 animate-float">
           <img 
             src={characterGirl} 
             alt="Personagem menina com jardineira" 
-            className="w-full h-full object-contain drop-shadow-lg"
+            className="w-full h-full object-contain drop-shadow-2xl"
           />
         </div>
-        <div className="animate-float w-20 h-20 md:w-32 md:h-32" style={{ animationDelay: '0.2s' }}>
+        
+        {/* Right character - Boy with backpack */}
+        <div 
+          className="absolute right-0 md:right-10 bottom-0 w-48 h-48 md:w-80 md:h-80 lg:w-96 lg:h-96 animate-float" 
+          style={{ animationDelay: '0.3s' }}
+        >
           <img 
             src={characterBoy} 
             alt="Personagem menino com mochila" 
-            className="w-full h-full object-contain drop-shadow-lg"
+            className="w-full h-full object-contain drop-shadow-2xl"
           />
         </div>
-        <div className="animate-float w-20 h-20 md:w-32 md:h-32" style={{ animationDelay: '0.4s' }}>
+        
+        {/* Center back character - Girl with fruits (smaller, creating depth) */}
+        <div 
+          className="absolute left-1/2 transform -translate-x-1/2 top-10 md:top-16 w-32 h-32 md:w-48 md:h-48 animate-float" 
+          style={{ animationDelay: '0.6s' }}
+        >
           <img 
             src={characterFruits} 
             alt="Personagem menina com cesto de frutas" 
-            className="w-full h-full object-contain drop-shadow-lg"
+            className="w-full h-full object-contain drop-shadow-2xl opacity-90"
           />
         </div>
       </div>
 
       {/* Main content */}
-      <div className="text-center space-y-6 max-w-2xl animate-fade-in relative z-10 mt-24 md:mt-32">
-        <div className="animate-float">
-          <img src={logoImage} alt="Little Giants Logo" className="w-24 h-24 md:w-32 md:h-32 mx-auto mb-4 drop-shadow-2xl" />
-        </div>
+      <div className="text-center space-y-6 max-w-2xl animate-fade-in relative z-20">
         
         <h1 className="text-5xl md:text-7xl lg:text-8xl font-heading font-bold logo-title animate-wiggle">
           Little Giants 🌱
