@@ -27,24 +27,24 @@ export const Home = () => {
         <div className="absolute top-60 right-20 w-2 h-2 bg-primary/30 rounded-full animate-float" style={{ animationDelay: '1.5s' }}></div>
       </div>
 
-      {/* Characters Group - Top Center */}
-      <div className="relative z-10 mb-8 animate-fade-in">
-        <div className="w-64 h-64 md:w-96 md:h-96 lg:w-[500px] lg:h-[500px] animate-float">
-          <img 
-            src={charactersGroup} 
-            alt="Lia, Nina e Zeca - Personagens principais" 
-            className="w-full h-full object-contain drop-shadow-2xl"
-          />
-        </div>
-      </div>
-
       {/* Main content */}
-      <div className="text-center space-y-6 max-w-2xl animate-fade-in relative z-20">
-        <h1 className="text-5xl md:text-7xl lg:text-8xl font-heading font-bold logo-title animate-wiggle mb-4">
+      <div className="text-center space-y-4 max-w-3xl animate-fade-in relative z-20">
+        {/* Characters Group - Above Title */}
+        <div className="relative z-10 mb-2 animate-fade-in">
+          <div className="w-48 h-48 md:w-64 md:h-64 lg:w-80 lg:h-80 mx-auto animate-float">
+            <img 
+              src={charactersGroup} 
+              alt="Lia, Nina e Zeca - Personagens principais" 
+              className="w-full h-full object-contain drop-shadow-2xl"
+            />
+          </div>
+        </div>
+
+        <h1 className="text-5xl md:text-7xl lg:text-8xl font-heading font-bold logo-title animate-wiggle mb-2">
           Little Giants 🌱
         </h1>
         
-        <p className="text-2xl md:text-3xl lg:text-4xl font-heading font-bold text-accent drop-shadow-lg">
+        <p className="text-2xl md:text-3xl lg:text-4xl font-heading font-bold text-accent drop-shadow-lg mb-4">
           Pequenos gestos, grandes mudanças
         </p>
         
