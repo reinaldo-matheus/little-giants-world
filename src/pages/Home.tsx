@@ -29,17 +29,6 @@ export const Home = () => {
 
       {/* Main content */}
       <div className="text-center space-y-4 max-w-3xl animate-fade-in relative z-20">
-        {/* Characters Group - Above Title */}
-        <div className="relative z-10 mb-2 animate-fade-in">
-          <div className="w-48 h-48 md:w-64 md:h-64 lg:w-80 lg:h-80 mx-auto animate-float">
-            <img 
-              src={charactersGroup} 
-              alt="Lia, Nina e Zeca - Personagens principais" 
-              className="w-full h-full object-contain drop-shadow-2xl"
-            />
-          </div>
-        </div>
-
         <h1 className="text-5xl md:text-7xl lg:text-8xl font-heading font-bold logo-title animate-wiggle mb-2">
           Little Giants 🌱
         </h1>
