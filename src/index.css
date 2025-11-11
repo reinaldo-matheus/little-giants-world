@@ -152,25 +152,31 @@ All colors MUST be HSL.
     font-family: 'Nunito', sans-serif;
   }
 
-  /* Pokémon Sun / Mega Dimension inspired logo styles */
+  /* Logo styling inspired by Pokémon Sun - Golden contours with 3D gradient and inner glow */
   .logo-title {
     font-family: 'Fredoka', sans-serif;
     font-weight: 800;
     background: linear-gradient(180deg, 
-      hsl(45, 100%, 60%) 0%,
-      hsl(35, 100%, 55%) 40%, 
-      hsl(25, 95%, 50%) 100%
+      hsl(48, 100%, 70%) 0%,
+      hsl(45, 100%, 60%) 30%,
+      hsl(40, 100%, 55%) 60%,
+      hsl(35, 100%, 50%) 100%
     );
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     text-shadow: 
-      4px 4px 0px hsl(20, 80%, 40%),
-      6px 6px 0px hsl(15, 70%, 30%),
-      0 0 30px hsl(45, 100%, 70%),
-      0 0 60px hsl(35, 100%, 60%);
-    filter: drop-shadow(0 8px 16px rgba(0, 0, 0, 0.3));
+      2px 2px 0px hsl(35, 100%, 45%),
+      3px 3px 0px hsl(30, 100%, 40%),
+      4px 4px 0px hsl(25, 100%, 35%),
+      5px 5px 0px hsl(20, 100%, 30%),
+      0 0 30px hsl(50, 100%, 75%),
+      0 0 50px hsl(48, 100%, 65%),
+      0 0 70px hsl(45, 100%, 55%);
+    filter: drop-shadow(0 6px 12px rgba(0, 0, 0, 0.4)) 
+            drop-shadow(0 0 20px hsl(48, 100%, 60%));
     letter-spacing: -0.02em;
+    position: relative;
   }
 
   /* Restore text shadow for elements with logo-title class */
