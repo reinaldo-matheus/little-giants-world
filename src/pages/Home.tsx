@@ -2,38 +2,36 @@ import { Button } from "@/components/ui/button";
 import { useNavigate } from "react-router-dom";
 import charactersGroup from "@/assets/characters-group-2d.png";
 import backgroundNatal from "@/assets/background-natal-beach.jpg";
-
 export const Home = () => {
   const navigate = useNavigate();
-
-  return (
-    <div 
-      className="min-h-screen relative flex flex-col items-center justify-center p-6 overflow-hidden"
-      style={{
-        backgroundImage: `url(${backgroundNatal})`,
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-        backgroundRepeat: 'no-repeat',
-      }}
-    >
+  return <div className="min-h-screen relative flex flex-col items-center justify-center p-6 overflow-hidden" style={{
+    backgroundImage: `url(${backgroundNatal})`,
+    backgroundSize: 'cover',
+    backgroundPosition: 'center',
+    backgroundRepeat: 'no-repeat'
+  }}>
       {/* Gradient overlay for better text readability */}
       <div className="absolute inset-0 bg-gradient-to-b from-background/30 via-transparent to-background/40"></div>
       
       {/* Floating particles effect */}
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute top-20 left-20 w-2 h-2 bg-primary/40 rounded-full animate-float"></div>
-        <div className="absolute top-40 right-32 w-3 h-3 bg-accent/30 rounded-full animate-float" style={{ animationDelay: '0.5s' }}></div>
-        <div className="absolute bottom-40 left-40 w-2 h-2 bg-pink/40 rounded-full animate-float" style={{ animationDelay: '1s' }}></div>
-        <div className="absolute top-60 right-20 w-2 h-2 bg-primary/30 rounded-full animate-float" style={{ animationDelay: '1.5s' }}></div>
+        <div className="absolute top-40 right-32 w-3 h-3 bg-accent/30 rounded-full animate-float" style={{
+        animationDelay: '0.5s'
+      }}></div>
+        <div className="absolute bottom-40 left-40 w-2 h-2 bg-pink/40 rounded-full animate-float" style={{
+        animationDelay: '1s'
+      }}></div>
+        <div className="absolute top-60 right-20 w-2 h-2 bg-primary/30 rounded-full animate-float" style={{
+        animationDelay: '1.5s'
+      }}></div>
       </div>
 
       {/* Main content */}
       <div className="text-center space-y-4 max-w-3xl animate-fade-in relative z-20">
-        <h1 className="text-5xl md:text-7xl lg:text-8xl font-heading font-bold logo-title animate-wiggle mb-2">
-          Little Giants 🌱
-        </h1>
+        <h1 className="text-5xl md:text-7xl font-heading logo-title animate-wiggle mb-2 font-bold text-yellow-400 lg:text-8xl">Little Giants </h1>
         
-        <p className="text-2xl md:text-3xl lg:text-4xl font-heading font-bold text-accent drop-shadow-lg mb-4">
+        <p className="text-2xl md:text-3xl lg:text-4xl font-heading font-bold drop-shadow-lg mb-4 text-blue-950">
           Pequenos gestos, grandes mudanças
         </p>
         
@@ -42,12 +40,7 @@ export const Home = () => {
         </p>
         
         <div className="pt-6 space-y-6">
-          <Button 
-            variant="play" 
-            size="lg"
-            onClick={() => navigate("/map")}
-            className="w-full md:w-auto text-xl md:text-2xl px-10 md:px-16 py-6 shadow-glow"
-          >
+          <Button variant="play" size="lg" onClick={() => navigate("/map")} className="w-full md:w-auto text-xl md:text-2xl px-10 md:px-16 py-6 shadow-glow">
             🎮 Jogar Agora
           </Button>
           
@@ -64,6 +57,5 @@ export const Home = () => {
           </div>
         </div>
       </div>
-    </div>
-  );
+    </div>;
 };
