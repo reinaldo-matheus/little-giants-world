@@ -9,19 +9,16 @@ interface GameCardProps {
   onClick: () => void;
   className?: string;
   locked?: boolean;
-  style?: React.CSSProperties;
 }
 
-export const GameCard = ({ title, description, icon, onClick, className, locked = false, style }: GameCardProps) => {
+export const GameCard = ({ title, description, icon, onClick, className, locked = false }: GameCardProps) => {
   return (
-    <Card 
-      className={cn(
-        "p-6 cursor-pointer transition-all hover:scale-105 shadow-card hover:shadow-button border-2 border-primary/20 hover:border-primary bg-card",
-        locked && "opacity-50 cursor-not-allowed",
-        className
-      )}
-      style={style}
-      onClick={!locked ? onClick : undefined}
+    <Card className={cn(
+      "p-6 cursor-pointer transition-all hover:scale-105 shadow-card hover:shadow-button border-2 border-primary/20 hover:border-primary bg-card",
+      locked && "opacity-50 cursor-not-allowed",
+      className
+    )}
+    onClick={!locked ? onClick : undefined}
     >
       <div className="text-center space-y-4">
         <div className="text-6xl animate-float">{icon}</div>
