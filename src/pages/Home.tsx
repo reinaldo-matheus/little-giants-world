@@ -27,7 +27,7 @@ export const Home = () => {
       </div>
 
       {/* Header com botões funcionais */}
-      <header className="relative z-20 p-4 flex justify-between items-start">
+      <header className="relative z-50 p-4 flex justify-between items-start">
         {/* Botão Sobre o Projeto (esquerda) */}
         <Dialog>
           <DialogTrigger asChild>
@@ -120,7 +120,7 @@ export const Home = () => {
       </div>
 
       {/* Área dos cards de valores (botões na base) */}
-      <div className="relative z-10 pb-8">
+      <div className="relative z-50 pb-8">
         <div 
           className="flex gap-4 justify-center px-6"
           style={{
