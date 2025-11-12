@@ -9,17 +9,17 @@ export const Home = () => {
   const [isMuted, setIsMuted] = useState(false);
 
   return (
-    <div 
-      className="min-h-screen relative flex flex-col overflow-hidden"
-      style={{
-        backgroundImage: `url(${homeBackground})`,
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-        backgroundRepeat: 'no-repeat'
-      }}
-    >
+    <div className="min-h-screen relative flex flex-col overflow-hidden bg-gradient-to-b from-yellow-100 to-green-100">
+      {/* Imagem de fundo com z-index baixo */}
+      <img 
+        src={homeBackground} 
+        alt="Little Giants Background" 
+        className="absolute inset-0 w-full h-full object-contain object-center"
+        style={{ zIndex: 1 }}
+      />
+      
       {/* Efeitos de partículas sutis */}
-      <div className="absolute inset-0 pointer-events-none">
+      <div className="absolute inset-0 pointer-events-none" style={{ zIndex: 2 }}>
         <div className="absolute top-20 left-20 w-2 h-2 bg-secondary/40 rounded-full animate-float"></div>
         <div className="absolute top-40 right-32 w-3 h-3 bg-accent/30 rounded-full animate-float" style={{ animationDelay: '0.5s' }}></div>
         <div className="absolute bottom-40 left-40 w-2 h-2 bg-pink/40 rounded-full animate-float" style={{ animationDelay: '1s' }}></div>
