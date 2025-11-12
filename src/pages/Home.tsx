@@ -101,10 +101,10 @@ export const Home = () => {
       </header>
 
       {/* Área clicável central invisível para o botão "Jogar Agora" */}
-      <div className="flex-1 flex items-center justify-center relative z-10">
+      <div className="flex-1 flex items-center justify-center relative z-50">
         <button
           onClick={() => navigate("/map")}
-          className="absolute"
+          className="absolute z-50"
           style={{
             bottom: '28%',
             left: '50%',
