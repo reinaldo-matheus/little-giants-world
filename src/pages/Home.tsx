@@ -1,61 +1,147 @@
-import { Button } from "@/components/ui/button";
+import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import charactersGroup from "@/assets/characters-group-2d.png";
-import backgroundNatal from "@/assets/background-natal-beach.jpg";
+import homeBackground from "@/assets/home-background.png";
+import { Volume2, VolumeX, Settings, Info } from "lucide-react";
+import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
+
 export const Home = () => {
   const navigate = useNavigate();
-  return <div className="min-h-screen relative flex flex-col items-center justify-center p-6 overflow-hidden" style={{
-    backgroundImage: `url(${backgroundNatal})`,
-    backgroundSize: 'cover',
-    backgroundPosition: 'center',
-    backgroundRepeat: 'no-repeat'
-  }}>
-      {/* Gradient overlay for better text readability */}
-      <div className="absolute inset-0 bg-gradient-to-b from-background/30 via-transparent to-background/40"></div>
-      
-      {/* Floating particles effect */}
+  const [isMuted, setIsMuted] = useState(false);
+
+  return (
+    <div 
+      className="min-h-screen relative flex flex-col overflow-hidden"
+      style={{
+        backgroundImage: `url(${homeBackground})`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat'
+      }}
+    >
+      {/* Efeitos de partículas sutis */}
       <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-20 left-20 w-2 h-2 bg-primary/40 rounded-full animate-float"></div>
-        <div className="absolute top-40 right-32 w-3 h-3 bg-accent/30 rounded-full animate-float" style={{
-        animationDelay: '0.5s'
-      }}></div>
-        <div className="absolute bottom-40 left-40 w-2 h-2 bg-pink/40 rounded-full animate-float" style={{
-        animationDelay: '1s'
-      }}></div>
-        <div className="absolute top-60 right-20 w-2 h-2 bg-primary/30 rounded-full animate-float" style={{
-        animationDelay: '1.5s'
-      }}></div>
+        <div className="absolute top-20 left-20 w-2 h-2 bg-secondary/40 rounded-full animate-float"></div>
+        <div className="absolute top-40 right-32 w-3 h-3 bg-accent/30 rounded-full animate-float" style={{ animationDelay: '0.5s' }}></div>
+        <div className="absolute bottom-40 left-40 w-2 h-2 bg-pink/40 rounded-full animate-float" style={{ animationDelay: '1s' }}></div>
+        <div className="absolute top-60 right-20 w-2 h-2 bg-primary/30 rounded-full animate-float" style={{ animationDelay: '1.5s' }}></div>
       </div>
 
-      {/* Main content */}
-      <div className="text-center space-y-4 max-w-3xl animate-fade-in relative z-20">
-        <h1 className="text-5xl md:text-7xl font-heading logo-title animate-wiggle mb-2 font-bold text-yellow-400 lg:text-8xl">Little Giants </h1>
-        
-        <p className="text-2xl md:text-3xl lg:text-4xl font-heading font-bold drop-shadow-lg mb-4 text-blue-950">
-          Pequenos gestos, grandes mudanças
-        </p>
-        
-        <p className="text-base md:text-lg text-foreground font-body max-w-lg mx-auto bg-card/90 backdrop-blur-md px-6 py-4 rounded-2xl shadow-card border-2 border-primary/20">
-          Venha fazer parte da Vila de Esperançópolis e aprenda como pequenas ações podem transformar o mundo!
-        </p>
-        
-        <div className="pt-6 space-y-6">
-          <Button variant="play" size="lg" onClick={() => navigate("/map")} className="w-full md:w-auto text-xl md:text-2xl px-10 md:px-16 py-6 shadow-glow">
-            🎮 Jogar Agora
-          </Button>
-          
-          <div className="flex gap-4 md:gap-6 justify-center flex-wrap">
-            <div className="px-6 md:px-8 py-3 md:py-4 bg-card/95 backdrop-blur-md rounded-2xl shadow-card border-3 border-primary/40 hover:scale-110 hover:shadow-glow transition-all duration-300 cursor-default">
-              <span className="text-primary font-heading font-bold text-base md:text-lg drop-shadow-sm">🌿 Cooperação</span>
-            </div>
-            <div className="px-6 md:px-8 py-3 md:py-4 bg-card/95 backdrop-blur-md rounded-2xl shadow-card border-3 border-accent/40 hover:scale-110 hover:shadow-glow transition-all duration-300 cursor-default">
-              <span className="text-accent font-heading font-bold text-base md:text-lg drop-shadow-sm">💙 Empatia</span>
-            </div>
-            <div className="px-6 md:px-8 py-3 md:py-4 bg-card/95 backdrop-blur-md rounded-2xl shadow-card border-3 border-pink/40 hover:scale-110 hover:shadow-glow transition-all duration-300 cursor-default">
-              <span className="text-pink font-heading font-bold text-base md:text-lg drop-shadow-sm">❤️ Solidariedade</span>
-            </div>
-          </div>
+      {/* Header com botões funcionais */}
+      <header className="relative z-20 p-4 flex justify-between items-start">
+        {/* Botão Sobre o Projeto (esquerda) */}
+        <Dialog>
+          <DialogTrigger asChild>
+            <button className="flex items-center gap-2 px-4 py-2 bg-card/95 backdrop-blur-md rounded-2xl shadow-card border-2 border-primary/30 hover:border-primary hover:scale-105 transition-all duration-300">
+              <Info className="w-5 h-5 text-primary" />
+              <span className="font-heading font-semibold text-foreground">Sobre o Projeto</span>
+            </button>
+          </DialogTrigger>
+          <DialogContent className="max-w-md">
+            <DialogHeader>
+              <DialogTitle className="text-2xl font-heading text-primary">ℹ️ Sobre o Projeto</DialogTitle>
+            </DialogHeader>
+            <p className="text-foreground font-body leading-relaxed">
+              Um jogo educativo inspirado na <strong>ODS 1 – Erradicação da Pobreza</strong>. 
+              Desenvolvido para crianças de 5 a 10 anos, com foco em <strong>empatia</strong>, 
+              <strong> cooperação</strong> e <strong>solidariedade</strong>.
+            </p>
+          </DialogContent>
+        </Dialog>
+
+        {/* Ícones funcionais (direita) */}
+        <div className="flex gap-3">
+          {/* Som */}
+          <button 
+            onClick={() => setIsMuted(!isMuted)}
+            className="p-3 bg-card/95 backdrop-blur-md rounded-full shadow-card border-2 border-primary/30 hover:border-primary hover:scale-110 transition-all duration-300"
+            aria-label={isMuted ? "Ativar som" : "Desativar som"}
+          >
+            {isMuted ? (
+              <VolumeX className="w-6 h-6 text-muted-foreground" />
+            ) : (
+              <Volume2 className="w-6 h-6 text-primary" />
+            )}
+          </button>
+
+          {/* Configurações */}
+          <Dialog>
+            <DialogTrigger asChild>
+              <button className="p-3 bg-card/95 backdrop-blur-md rounded-full shadow-card border-2 border-primary/30 hover:border-primary hover:scale-110 transition-all duration-300">
+                <Settings className="w-6 h-6 text-primary" />
+              </button>
+            </DialogTrigger>
+            <DialogContent className="max-w-md">
+              <DialogHeader>
+                <DialogTitle className="text-2xl font-heading text-primary">⚙️ Configurações</DialogTitle>
+              </DialogHeader>
+              <div className="space-y-4">
+                <div className="space-y-2">
+                  <label className="font-heading font-semibold text-foreground">Idioma</label>
+                  <select className="w-full p-2 rounded-lg border-2 border-border bg-background font-body">
+                    <option>Português (BR)</option>
+                    <option>English</option>
+                    <option>Español</option>
+                  </select>
+                </div>
+                <div className="space-y-2">
+                  <label className="font-heading font-semibold text-foreground">Volume</label>
+                  <input type="range" min="0" max="100" defaultValue="80" className="w-full" />
+                </div>
+                <div className="space-y-2">
+                  <label className="font-heading font-semibold text-foreground">Acessibilidade</label>
+                  <div className="flex items-center gap-2">
+                    <input type="checkbox" id="high-contrast" className="rounded" />
+                    <label htmlFor="high-contrast" className="font-body text-sm">Alto contraste</label>
+                  </div>
+                </div>
+              </div>
+            </DialogContent>
+          </Dialog>
+        </div>
+      </header>
+
+      {/* Área clicável central invisível para o botão "Jogar Agora" */}
+      <div className="flex-1 flex items-center justify-center relative z-10">
+        <button
+          onClick={() => navigate("/map")}
+          className="absolute"
+          style={{
+            bottom: '28%',
+            left: '50%',
+            transform: 'translateX(-50%)',
+            width: '480px',
+            height: '80px',
+            background: 'transparent',
+            cursor: 'pointer',
+            border: 'none'
+          }}
+          aria-label="Jogar Agora"
+        />
+      </div>
+
+      {/* Área dos cards de valores (botões na base) */}
+      <div className="relative z-10 pb-8">
+        <div 
+          className="flex gap-4 justify-center px-6"
+          style={{
+            marginBottom: '40px'
+          }}
+        >
+          {/* Cards transparentes clicáveis sobre os cards da imagem */}
+          <button
+            className="w-32 h-20 bg-transparent cursor-default"
+            aria-label="Cooperação"
+          />
+          <button
+            className="w-32 h-20 bg-transparent cursor-default"
+            aria-label="Empatia"
+          />
+          <button
+            className="w-32 h-20 bg-transparent cursor-default"
+            aria-label="Solidariedade"
+          />
         </div>
       </div>
-    </div>;
+    </div>
+  );
 };
