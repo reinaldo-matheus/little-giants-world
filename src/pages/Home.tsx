@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { useNavigate } from "react-router-dom";
-import backgroundVillage from "@/assets/background-village-anime.jpg";
+import backgroundVillage from "@/assets/characters-group-2d.png";
 export const Home = () => {
   const navigate = useNavigate();
   return <div className="min-h-screen relative flex flex-col items-center justify-center p-6 overflow-hidden" style={{
