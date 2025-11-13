@@ -39,7 +39,7 @@ export const Home = () => {
         </p>
         
         <div className="pt-6 space-y-6">
-          <Button variant="play" size="lg" onClick={() => navigate("/map")} className="w-full md:w-auto text-xl md:text-2xl px-10 md:px-16 py-6 shadow-glow">
+          <Button variant="play" size="lg" onClick={() => navigate("/character-selection")} className="w-full md:w-auto text-xl md:text-2xl px-10 md:px-16 py-6 shadow-glow">
             🎮 Jogar Agora
           </Button>
           
