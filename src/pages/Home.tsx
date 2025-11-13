@@ -1,11 +1,10 @@
 import { Button } from "@/components/ui/button";
 import { useNavigate } from "react-router-dom";
-import charactersGroup from "@/assets/characters-group-2d.png";
-import backgroundNatal from "@/assets/background-natal-beach.jpg";
+import backgroundVillage from "@/assets/background-village-anime.jpg";
 export const Home = () => {
   const navigate = useNavigate();
   return <div className="min-h-screen relative flex flex-col items-center justify-center p-6 overflow-hidden" style={{
-    backgroundImage: `url(${backgroundNatal})`,
+    backgroundImage: `url(${backgroundVillage})`,
     backgroundSize: 'cover',
     backgroundPosition: 'center',
     backgroundRepeat: 'no-repeat'
