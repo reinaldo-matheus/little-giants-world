@@ -31,9 +31,7 @@ export const Home = () => {
       <div className="text-center space-y-6 md:space-y-8 max-w-3xl animate-fade-in relative z-20 -mt-12 md:-mt-16">
         
         
-        <p className="text-xl md:text-2xl lg:text-3xl xl:text-4xl font-heading font-bold mb-6 text-blue-950 drop-shadow-[0_2px_8px_rgba(255,255,255,0.8)]">
-          Pequenos gestos, grandes mudanças
-        </p>
+        
         
         <p className="text-sm md:text-base lg:text-lg text-foreground font-body max-w-lg mx-auto bg-card/90 backdrop-blur-md px-5 md:px-6 py-3 md:py-4 rounded-2xl shadow-card border-2 border-primary/20 mt-6">
           Venha fazer parte da Vila de Esperançópolis e aprenda como pequenas ações podem transformar o mundo!
