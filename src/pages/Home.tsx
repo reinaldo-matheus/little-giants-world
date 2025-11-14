@@ -1,20 +1,14 @@
 import { Button } from "@/components/ui/button";
 import { useNavigate } from "react-router-dom";
 import backgroundVillage from "@/assets/characters-group-2d.png";
-
 export const Home = () => {
   const navigate = useNavigate();
-  
-  return (
-    <div 
-      className="min-h-screen relative flex flex-col items-center justify-center p-4 md:p-6 overflow-hidden" 
-      style={{
-        backgroundImage: `url(${backgroundVillage})`,
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-        backgroundRepeat: 'no-repeat'
-      }}
-    >
+  return <div className="min-h-screen relative flex flex-col items-center justify-center p-4 md:p-6 overflow-hidden" style={{
+    backgroundImage: `url(${backgroundVillage})`,
+    backgroundSize: 'cover',
+    backgroundPosition: 'center',
+    backgroundRepeat: 'no-repeat'
+  }}>
       {/* Gradient overlays for better readability */}
       <div className="absolute inset-0 bg-gradient-to-b from-white/10 via-transparent to-black/15"></div>
       <div className="absolute top-0 left-0 right-0 h-64 bg-gradient-to-b from-white/65 to-transparent"></div>
@@ -22,16 +16,20 @@ export const Home = () => {
       {/* Floating particles effect */}
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute top-20 left-20 w-2 h-2 bg-primary/40 rounded-full animate-float"></div>
-        <div className="absolute top-40 right-32 w-3 h-3 bg-accent/30 rounded-full animate-float" style={{ animationDelay: '0.5s' }}></div>
-        <div className="absolute bottom-40 left-40 w-2 h-2 bg-pink/40 rounded-full animate-float" style={{ animationDelay: '1s' }}></div>
-        <div className="absolute top-60 right-20 w-2 h-2 bg-primary/30 rounded-full animate-float" style={{ animationDelay: '1.5s' }}></div>
+        <div className="absolute top-40 right-32 w-3 h-3 bg-accent/30 rounded-full animate-float" style={{
+        animationDelay: '0.5s'
+      }}></div>
+        <div className="absolute bottom-40 left-40 w-2 h-2 bg-pink/40 rounded-full animate-float" style={{
+        animationDelay: '1s'
+      }}></div>
+        <div className="absolute top-60 right-20 w-2 h-2 bg-primary/30 rounded-full animate-float" style={{
+        animationDelay: '1.5s'
+      }}></div>
       </div>
 
       {/* Main content */}
       <div className="text-center space-y-6 md:space-y-8 max-w-3xl animate-fade-in relative z-20 -mt-12 md:-mt-16">
-        <h1 className="text-4xl md:text-6xl lg:text-7xl xl:text-8xl font-heading logo-title animate-wiggle mb-2 font-bold text-yellow-400 drop-shadow-[0_4px_12px_rgba(0,0,0,0.35)]">
-          Little Giants
-        </h1>
+        
         
         <p className="text-xl md:text-2xl lg:text-3xl xl:text-4xl font-heading font-bold mb-6 text-blue-950 drop-shadow-[0_2px_8px_rgba(255,255,255,0.8)]">
           Pequenos gestos, grandes mudanças
@@ -42,12 +40,7 @@ export const Home = () => {
         </p>
         
         <div className="pt-8 md:pt-10 space-y-8 md:space-y-10">
-          <Button 
-            variant="play" 
-            size="lg" 
-            onClick={() => navigate("/character-selection")} 
-            className="w-full md:w-auto text-lg md:text-xl lg:text-2xl px-8 md:px-12 lg:px-16 py-5 md:py-6 shadow-glow hover:scale-105 transition-transform duration-300"
-          >
+          <Button variant="play" size="lg" onClick={() => navigate("/character-selection")} className="w-full md:w-auto text-lg md:text-xl lg:text-2xl px-8 md:px-12 lg:px-16 py-5 md:py-6 shadow-glow hover:scale-105 transition-transform duration-300">
             🎮 Jogar Agora
           </Button>
           
@@ -60,16 +53,15 @@ export const Home = () => {
               <div className="px-5 md:px-6 lg:px-8 py-2.5 md:py-3 lg:py-4 bg-card/90 backdrop-blur-md rounded-2xl shadow-card border-2 border-primary/40 hover:scale-105 hover:shadow-glow hover:bg-card/95 transition-all duration-300 cursor-default opacity-90">
                 <span className="text-primary font-heading font-bold text-sm md:text-base lg:text-lg drop-shadow-sm">🌿 Cooperação</span>
               </div>
-              <div className="px-5 md:px-6 lg:px-8 py-2.5 md:py-3 lg:py-4 bg-card/90 backdrop-blur-md rounded-2xl shadow-card border-2 border-accent/40 hover:scale-105 hover:shadow-glow hover:bg-card/95 transition-all duration-300 cursor-default opacity-90">
+              <div className="px-5 md:px-6 lg:px-8 py-2.5 md:py-3 lg:py-4 bg-card/90 backdrop-blur-md rounded-2xl shadow-card border-2 border-accent/40 hover:scale-105 hover:shadow-glow hover:bg-card/95 transition-all duration-300 cursor-default opacity-90 mx-0">
                 <span className="text-accent font-heading font-bold text-sm md:text-base lg:text-lg drop-shadow-sm">💙 Empatia</span>
               </div>
               <div className="px-5 md:px-6 lg:px-8 py-2.5 md:py-3 lg:py-4 bg-card/90 backdrop-blur-md rounded-2xl shadow-card border-2 border-pink/40 hover:scale-105 hover:shadow-glow hover:bg-card/95 transition-all duration-300 cursor-default opacity-90">
-                <span className="text-pink font-heading font-bold text-sm md:text-base lg:text-lg drop-shadow-sm">❤️ Solidariedade</span>
+                
               </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-  );
+    </div>;
 };
