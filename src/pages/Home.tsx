@@ -45,21 +45,9 @@ export const Home = () => {
           </Button>
           
           <div className="space-y-4">
-            <p className="text-[#3C9AE8] font-heading font-semibold text-sm md:text-base tracking-wide">
-              Valores do jogo
-            </p>
             
-            <div className="flex gap-3 md:gap-4 lg:gap-6 justify-center flex-wrap">
-              <div className="px-5 md:px-6 lg:px-8 py-2.5 md:py-3 lg:py-4 bg-card/90 backdrop-blur-md rounded-2xl shadow-card border-2 border-primary/40 hover:scale-105 hover:shadow-glow hover:bg-card/95 transition-all duration-300 cursor-default opacity-90">
-                <span className="text-primary font-heading font-bold text-sm md:text-base lg:text-lg drop-shadow-sm">🌿 Cooperação</span>
-              </div>
-              <div className="px-5 md:px-6 lg:px-8 py-2.5 md:py-3 lg:py-4 bg-card/90 backdrop-blur-md rounded-2xl shadow-card border-2 border-accent/40 hover:scale-105 hover:shadow-glow hover:bg-card/95 transition-all duration-300 cursor-default opacity-90 mx-0">
-                <span className="text-accent font-heading font-bold text-sm md:text-base lg:text-lg drop-shadow-sm">💙 Empatia</span>
-              </div>
-              <div className="px-5 md:px-6 lg:px-8 py-2.5 md:py-3 lg:py-4 bg-card/90 backdrop-blur-md rounded-2xl shadow-card border-2 border-pink/40 hover:scale-105 hover:shadow-glow hover:bg-card/95 transition-all duration-300 cursor-default opacity-90">
-                
-              </div>
-            </div>
+            
+            
           </div>
         </div>
       </div>
