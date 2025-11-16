@@ -31,13 +31,6 @@ export const Home = () => {
       {/* Main content */}
       <div className="text-center space-y-6 md:space-y-8 max-w-3xl animate-fade-in relative z-20 -mt-12 md:-mt-16">
         
-        
-        
-        
-        <p className="text-sm md:text-base lg:text-lg text-foreground font-body max-w-lg mx-auto bg-card/90 backdrop-blur-md px-5 md:px-6 py-3 md:py-4 rounded-2xl shadow-card border-2 border-primary/20 mt-6">
-          Venha fazer parte da Vila de Esperançópolis e aprenda como pequenas ações podem transformar o mundo!
-        </p>
-        
         <div className="pt-8 md:pt-10 space-y-8 md:space-y-10">
           <Button variant="play" size="lg" onClick={() => navigate("/character-selection")} className="w-full md:w-auto text-lg md:text-xl lg:text-2xl px-8 md:px-12 lg:px-16 py-5 md:py-6 shadow-glow hover:scale-105 transition-transform duration-300">
             🎮 Jogar Agora
@@ -49,6 +42,13 @@ export const Home = () => {
             
           </div>
         </div>
+      </div>
+      
+      {/* Footer paragraph */}
+      <div className="absolute bottom-6 md:bottom-8 left-0 right-0 z-20 px-4">
+        <p className="text-sm md:text-base lg:text-lg text-foreground font-body max-w-lg mx-auto bg-card/90 backdrop-blur-md px-5 md:px-6 py-3 md:py-4 rounded-2xl shadow-card border-2 border-primary/20">
+          Venha fazer parte da Vila de Esperançópolis e aprenda como pequenas ações podem transformar o mundo!
+        </p>
       </div>
     </div>;
 };
