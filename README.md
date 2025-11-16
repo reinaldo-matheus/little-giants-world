@@ -1,73 +1,95 @@
-# Welcome to your Lovable project
+## Bem vindo ao Little Giants 👨🏾‍💻
+um jogo educativo e interativo criado para promover **empatia, cooperação e solidariedade** entre crianças 
 
-## Project info
+---
 
-**URL**: https://lovable.dev/projects/b0eab1ca-1541-49d4-a16a-991afe0fdade
+## 🎯 Objetivo do Projeto
+O **Little Giants** é um jogo educativo e interativo criado para promover **empatia, cooperação e solidariedade** entre crianças em situação de vulnerabilidade social.  
+Baseado na **ODS 1 – Erradicação da Pobreza**, o projeto utiliza a tecnologia como ponte para estimular desenvolvimento cognitivo, social e emocional.
 
-## How can I edit this code?
+Inspirado na realidade da **Vila de Ponta Negra (Natal/RN)**, o projeto foi desenvolvido em parceria com o **Educandário de Luz – Projeto AMAR**.
 
-There are several ways of editing your application.
+---
 
-**Use Lovable**
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/b0eab1ca-1541-49d4-a16a-991afe0fdade) and start prompting.
 
-Changes made via Lovable will be committed automatically to this repo.
 
-**Use your preferred IDE**
+<img width="200" height="400" alt="Capa-do-projeto-litle-Giants" src="https://github.com/user-attachments/assets/8ffa0827-49be-48c9-83c6-442bb587dd6e" />
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
 
-Follow these steps:
+---
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+## 🕹️ Prévia do Jogo 
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+<img width="300" height="400" alt="Captura de tela 2025-11-15 235011" src="https://github.com/user-attachments/assets/7c5dafac-6464-49b2-9dc6-eff0bb022fb5" />
+<img width="300" height="400" alt="Captura de tela 2025-11-15 234957" src="https://github.com/user-attachments/assets/6c2e553a-aa62-4c79-a690-bba6b6095ef3" />
+<img width="300" height="400" alt="Captura de tela 2025-11-15 235043" src="https://github.com/user-attachments/assets/3eaba1aa-d345-4022-af88-cc19527c5bb4" />
+<img width="300" height="400" alt="Captura de tela 2025-11-15 235154" src="https://github.com/user-attachments/assets/b55ef9ce-91aa-46be-8b24-0c3660e3728c" />
 
-# Step 3: Install the necessary dependencies.
-npm i
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
 
-**Edit a file directly in GitHub**
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
 
-**Use GitHub Codespaces**
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
 
-## What technologies are used for this project?
 
-This project is built with:
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
 
-## How can I deploy this project?
 
-Simply open [Lovable](https://lovable.dev/projects/b0eab1ca-1541-49d4-a16a-991afe0fdade) and click on Share -> Publish.
 
-## Can I connect a custom domain to my Lovable project?
+## 🧩 Sobre o Jogo
 
-Yes, you can!
+### 🧠 Proposta
+Criar experiências lúdicas que reforcem valores sociais através da gamificação.
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+### 🧩 Fase 1: Horta Comunitária  
+Ensina cooperação, paciência e responsabilidade coletiva.
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+### 🚧 Futuras Fases
+- **Escola** – conhecimento e colaboração  
+- **Feira** – empatia e consumo consciente  
+- **Praça** – convivência e solidariedade  
+
+---
+
+## 🧠 Impacto Educacional
+
+Durante os testes no Educandário de Luz:
+
+- 👩‍🏫 **6/6 educadores** aprovaram o jogo  
+- 💻 **100%** apoiam o uso da tecnologia  
+- 🎮 **90%** das crianças demonstraram forte engajamento  
+- 📈 Melhora na atenção e no envolvimento durante atividades  
+
+---
+
+## 📊 Resultados Observados
+| Indicador | Resultado | Descrição |
+|----------|-----------|-----------|
+| Engajamento Infantil | 90% | Participação ativa nas mecânicas do jogo |
+| Satisfação dos Educadores | 100% | Aceitação total durante a fase experimental |
+| Desenvolvimento Social | Alto | Melhora na empatia e cooperação entre alunos |
+
+---
+
+## 💬 Feedback Real da Comunidade
+> “O jogo despertou o interesse das crianças e reforçou valores essenciais que trabalhamos diariamente.”  
+> — Educadora do Projeto AMAR  
+
+---
+
+## 🧪 Tecnologias Utilizadas
+- **JavaScript**
+- **React.js**
+- **Tailwind CSS**
+- **Framer Motion**
+- **Canva & Figma** (design)
+- **Excel** (análise de dados)
+- **PowerPoint** (relatórios e apresentação)
+
+---
+
+## 🌍 Parceria Social
+O projeto foi aplicado na escola  **Educandário de Luz – Projeto AMAR**, organização filantrópica com 10+ anos de impacto social.
+
