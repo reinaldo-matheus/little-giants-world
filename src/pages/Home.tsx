@@ -4,10 +4,11 @@ import backgroundVillage from "@/assets/characters-group-2d.png";
 export const Home = () => {
   const navigate = useNavigate();
   return <div className="min-h-screen relative flex flex-col items-center justify-center p-4 md:p-6 overflow-hidden" style={{
-    backgroundImage: `linear-gradient(180deg, hsl(200 60% 85%) 0%, hsl(120 40% 75%) 100%), url(${backgroundVillage})`,
-    backgroundSize: 'cover, contain',
-    backgroundPosition: 'center, center top',
-    backgroundRepeat: 'no-repeat, no-repeat'
+    backgroundImage: `url(${backgroundVillage})`,
+    backgroundSize: 'contain',
+    backgroundPosition: 'center top',
+    backgroundRepeat: 'no-repeat',
+    backgroundColor: '#a8d5e2'
   }}>
       {/* Gradient overlays for better readability */}
       <div className="absolute inset-0 bg-gradient-to-b from-white/10 via-transparent to-black/15"></div>
