@@ -8,26 +8,22 @@ export const VillageMap = () => {
   const navigate = useNavigate();
 
   return (
-    <div 
+    <div
       className="min-h-screen bg-cover bg-center bg-fixed relative"
       style={{ backgroundImage: `url(${villageMapImage})` }}
     >
       <div className="absolute inset-0 bg-background/30 backdrop-blur-sm" />
-      
+
       <div className="relative z-10 container mx-auto px-4 py-8">
         <div className="flex items-center justify-between mb-8">
-          <Button 
-            variant="outline" 
-            size="sm"
-            onClick={() => navigate("/")}
-          >
+          <Button variant="outline" size="sm" onClick={() => navigate("/")}>
             <ArrowLeft className="mr-2" /> Voltar
           </Button>
-          
+
           <h1 className="text-4xl md:text-5xl font-heading font-bold text-primary drop-shadow-lg">
             Vila de Esperançópolis 🏘️
           </h1>
-          
+
           <div className="w-24" />
         </div>
 
@@ -38,15 +34,14 @@ export const VillageMap = () => {
             description="Aprenda a plantar e cuidar de uma horta com seus amigos!"
             onClick={() => navigate("/mission/garden")}
           />
-          
+
           <GameCard
-            icon="🏫"
-            title="Escola"
-            description="Descubra como estudar e ensinar podem mudar vidas!"
-            onClick={() => navigate("/mission/school")}
-            locked
+            icon="🌿"
+            title="Guardiões do Meio Ambiente"
+            description="Higiene, lixo, água e alimentação — aprenda a cuidar do planeta e da saúde!"
+            onClick={() => navigate("/mission/environment")}
           />
-          
+
           <GameCard
             icon="🎪"
             title="Praça"
@@ -54,7 +49,7 @@ export const VillageMap = () => {
             onClick={() => navigate("/mission/square")}
             locked
           />
-          
+
           <GameCard
             icon="🛒"
             title="Feira"

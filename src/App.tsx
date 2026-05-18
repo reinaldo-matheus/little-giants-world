@@ -7,6 +7,7 @@ import { Home } from "./pages/Home";
 import { CharacterSelection } from "./pages/CharacterSelection";
 import { VillageMap } from "./pages/VillageMap";
 import { GardenMission } from "./pages/GardenMission";
+import { EnvironmentMission } from "./pages/EnvironmentMission";
 import { Reward } from "./pages/Reward";
 import NotFound from "./pages/NotFound";
 
@@ -23,6 +24,7 @@ const App = () => (
           <Route path="/character-selection" element={<CharacterSelection />} />
           <Route path="/map" element={<VillageMap />} />
           <Route path="/mission/garden" element={<GardenMission />} />
+          <Route path="/mission/environment" element={<EnvironmentMission />} />
           <Route path="/reward" element={<Reward />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
