@@ -9,6 +9,7 @@ import { VillageMap } from "./pages/VillageMap";
 import { GardenMission } from "./pages/GardenMission";
 import { EnvironmentMission } from "./pages/EnvironmentMission";
 import { Reward } from "./pages/Reward";
+import { MarketMission } from "./pages/MarketMission";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -25,6 +26,7 @@ const App = () => (
           <Route path="/map" element={<VillageMap />} />
           <Route path="/mission/garden" element={<GardenMission />} />
           <Route path="/mission/environment" element={<EnvironmentMission />} />
+          <Route path="/mission/market" element={<MarketMission />} />
           <Route path="/reward" element={<Reward />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />

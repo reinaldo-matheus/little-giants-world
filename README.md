@@ -95,7 +95,7 @@ Inspirado na realidade da **Vila de Ponta Negra (Natal/RN)**, desenvolvido em pa
 | 🌱 **Horta Comunitária** | Aprenda a plantar e cuidar com seus amigos | ✅ Disponível |
 | 🌿 **Guardiões do Meio Ambiente** | Higiene, lixo, água e alimentação | ✅ Disponível |
 | 🎪 **Praça** | Organize eventos e una a comunidade | 🔒 Em breve |
-| 🛒 **Feira** | Aprenda sobre comércio justo e solidário | 🔒 Em breve |
+| 🛒 **Feira das Boas Escolhas** | Planejamento, cuidado, reúso e trocas voluntárias | ✅ Disponível |
 
 ### Missões — Guardiões do Meio Ambiente
 
@@ -163,7 +163,7 @@ cd little-giants-world
 npm install
 
 # Inicie o projeto
-npm start
+npm run dev
 ```
 
 ---
@@ -176,7 +176,7 @@ npm start
 - [x] Fase: Horta Comunitária
 - [x] Fase: Guardiões do Meio Ambiente (4 missões completas)
 - [ ] Fase: Praça — convivência e solidariedade
-- [ ] Fase: Feira — empatia e consumo consciente
+- [x] Fase: Feira das Boas Escolhas — planejamento, cuidado e trocas voluntárias
 - [ ] Sistema de recompensas e badges
 - [ ] Modo multiplayer cooperativo
 
@@ -195,3 +195,32 @@ Desenvolvido em parceria com a **Escola Educandário de Luz – Projeto AMAR**, 
 Feito com 💚 por [Matheus Reinaldo](https://github.com/reinaldo-matheus)
 
 </div>
+
+## Feira das Boas Escolhas
+
+Acesse pelo mapa ou pela rota `/mission/market`. Os três desafios podem ser feitos em qualquer ordem:
+
+- **A mochila das escolhas:** selecionar materiais para uma oficina, com 10 moedas fictícias; borracha e caixa são necessárias, adesivos são opcionais e sobras são permitidas.
+- **Oficina da nova chance:** reparar um livro com ajuda, respeitar a vontade de trocar e reconhecer um objeto inseguro. Respostas inadequadas permitem nova tentativa.
+- **A roda das trocas:** combinar ofertas e pedidos por cliques ou teclado e confirmar as trocas já consentidas pelos personagens.
+
+Após os três desafios, o botão “Ver meu selo” abre o **Selo Amigo das Boas Escolhas**. Não há redirecionamento automático. É possível rever os desafios, voltar ao mapa e reiniciar a Feira após confirmação.
+
+O progresso e as escolhas são salvos somente neste navegador, na chave versionada `little-giants:market:v1`. Dados ausentes, inválidos ou antigos são tratados com segurança. Reiniciar substitui apenas essa chave; não modifica personagem nem outras fases. Se o armazenamento estiver indisponível, a Feira continua na sessão e informa que não pode salvar.
+
+A fase aborda **ODS 12 — Consumo e produção responsáveis**, com educação para o consumo consciente (meta 12.8) e reúso (meta 12.5). Desejos são naturais, trocas e doações são voluntárias e substituir um objeto pode ser necessário para segurança. Não coleta dados pessoais ou financeiros.
+
+A história da Feira usa Lia, Bia e Caio conforme o conteúdo pedagógico. A seleção preexistente de Luna, Nina e Caio foi preservada.
+
+### Validação local
+
+```bash
+npm ci
+npm run dev
+npm test
+npm run build
+npm run lint
+npx tsc --noEmit -p tsconfig.app.json
+```
+
+Os testes usam o executor nativo do Node e o TypeScript já instalado, sem infraestrutura adicional. Cobrem combinações de orçamento, materiais obrigatórios, conclusão, trocas confirmadas, persistência inválida e isolamento do reinício.

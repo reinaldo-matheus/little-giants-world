@@ -52,10 +52,9 @@ export const VillageMap = () => {
 
           <GameCard
             icon="🛒"
-            title="Feira"
-            description="Aprenda sobre comércio justo e solidário!"
+            title="Feira das Boas Escolhas"
+            description="Planeje, cuide dos objetos e troque com os amigos!"
             onClick={() => navigate("/mission/market")}
-            locked
           />
         </div>
 
